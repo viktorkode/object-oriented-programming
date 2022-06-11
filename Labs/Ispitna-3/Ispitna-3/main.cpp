@@ -59,7 +59,24 @@ public:
 
     ~Student(){delete [] ocenki;}
 
-   //dopolni ja klasata
+    virtual int getBodovi(){
+        int br=0;
+        for(int i=0; i<brojOcenki; i++){
+            if(ocenki[i]>5){
+                br++;
+            }
+        }
+        
+        return br*100/brojOcenki;
+    }
+    
+    virtual void pecati(){
+        cout << indeks << endl;
+    }
+    
+    int getBrOcenki(){
+        return brojOcenki;
+    }
 
 };
 
@@ -113,6 +130,36 @@ public:
              if (i<brojKursevi-1) cout<<", ";  else cout<<")";
         }
     }
+    
+    int getBrKursevi(){
+        return brojKursevi;
+    }
+    
+    virtual void pecati(){
+        cout << imeIPrezime << " (";
+        
+        for(int i=0; i<brojKursevi; i++){
+            kursevi[i].pecati();
+            if(i<brojKursevi-1){
+                cout << ", ";
+            }else{
+                cout << ")";
+            }
+        }
+    }
+};
+
+class NoCourseException {
+public:
+    int ind;
+    
+    NoCourseException(int ind){
+        this->ind=ind;
+    }
+    
+    void message(){
+        cout << "Demonstratorot so indeks " << ind << " ne drzi laboratoriski vezbi" << endl;
+    }
 };
 
 class Demonstrator : public Student, public Predavach {
@@ -126,16 +173,55 @@ public:
         this->brCasovi=brCasovi;
     }
     
-    int getBodovi
+    int getBodovi(){
+        int br=0;
+        
+        try{
+            if(getBrKursevi()==0){
+                throw NoCourseException(indeks);
+            }
+            
+            br=Student::getBodovi()+20*brCasovi/getBrKursevi();
+        }
+        catch(NoCourseException &n){
+            n.message();
+        }
+        return br;
+    }
+    
+    void pecati(){
+        cout << indeks << ": ";
+        Predavach::pecati();
+    }
 };
 
-//mesto za vashiot kod
+Student& vratiNajdobroRangiran(Student **studenti, int n){
+    float max=0;
+    int ind=0;
+    for(int i=0; i<n; i++){
+        if(studenti[i]->getBodovi()>max){
+            max=studenti[i]->getBodovi();
+            ind=i;
+        }
+    }
+    
+    return *studenti[ind];
+}
 
-
-
-
-
-
+void pecatiDemonstratoriKurs(char *kurs, Student **studenti, int n){
+    for(int i=0; i<n; i++) {
+        Demonstrator *pok=dynamic_cast<Demonstrator*>(studenti[i]);
+        
+        if(pok){
+            for(int j=0; j<pok->getBrKursevi(); j++){
+                if((*pok)[j]==kurs){
+                    studenti[i]->pecati();
+                    cout << endl;
+                }
+            }
+        }
+    }
+}
 
 int main(){
 
