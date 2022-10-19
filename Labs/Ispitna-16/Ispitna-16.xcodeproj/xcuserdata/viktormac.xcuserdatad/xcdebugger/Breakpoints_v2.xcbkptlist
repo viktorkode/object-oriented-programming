@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7F2A9F00-9E7C-4F9F-B7CD-18FC469D5829"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65E96E2D-311C-4096-98F6-B9EF11C1DB4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ispitna-16/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "Transport"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "513B4C7F-85E6-4EC0-AEFE-CC2B98361FAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ispitna-16/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "AvtomobilTransport"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "513B4C7F-85E6-4EC0-AEFE-CC2B98361FAF - e0baa2af6bab233a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AvtomobilTransport::AvtomobilTransport(char*, int, int, bool)"
+                  moduleName = "Ispitna-16"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktormac/Documents/GitHub/object-oriented-programming/Labs/Ispitna-16/Ispitna-16/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "513B4C7F-85E6-4EC0-AEFE-CC2B98361FAF - e0baa2af6bab233a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AvtomobilTransport::AvtomobilTransport(char*, int, int, bool)"
+                  moduleName = "Ispitna-16"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/viktormac/Documents/GitHub/object-oriented-programming/Labs/Ispitna-16/Ispitna-16/main.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0855435-8D14-489A-8D31-D1DB857229BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ispitna-16/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "KombeTransport"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
